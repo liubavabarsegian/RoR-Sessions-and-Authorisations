@@ -1,0 +1,20 @@
+<div class = "main-login">
+
+  <h1>Log in please</h1>
+  <%= form_with(url: session_path,class: "form")  do |form| %>
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email, class: "form-control", type: "email"  %>
+  </div>
+
+  <div>
+    <%= form.label :password, style: "display: block" %>
+    <%= form.text_field :password, type: "password", class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.submit "Log in", class: "btn btn-primary btn-lg", style: "height: 60px;width:200px;" %>
+    <%= link_to "Sign up", new_path, :method => "get", class: "btn btn-primary btn-lg", style: "height: 60px;width:200px;" %>
+  </div>
+<% end %>
+</div>

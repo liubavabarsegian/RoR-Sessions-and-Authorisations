@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+.navbar
+{
+    background-color:#ab44db; 
+    
+}
+.navbar a
+{
+    font-size: 25px;
+}
+.navbar a:hover
+{
+    color:#de98fe
+} 
+.log-in
+{
+    margin-left: 500px;
+}

@@ -1,0 +1,27 @@
+<main class = "result-main">
+    <h1>Числа Мерсенна в диапазоне [0, <%= @input%>]</h1>
+
+    <% unless @result_m.size.zero? %>
+        <table class = "table-bordered">
+            <thead>
+                <tr>
+                    <th>  №  </th>
+                    <th>Число Мерсенна</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%i = 0%>
+                <% while i < @result_m.size do %>
+                    <tr>
+                        <td><%= i + 1%></td>
+                        <td><%= @result_m[i]%></td>
+                    </tr>
+                    <%i+= 1%>
+                    <%end%>
+            </tbody>
+        </table>
+    <% end %>
+    <h3>Количество чисел Мерсена: <%= @result_m.size %></h3>
+    <div id = "go-back"><%= link_to "Вернуться назад", 'form' %></div>
+</main>
+

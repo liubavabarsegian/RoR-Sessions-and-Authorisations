@@ -1,0 +1,11 @@
+.main-last
+{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.main-last h1
+{
+    color: #ab44db;
+}

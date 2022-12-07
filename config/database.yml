@@ -20,10 +20,12 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: liubasik
+  password: <%= ENV["MERSENNE_DATABASE_PASSWORD"] %>
 
 development:
   <<: *default
-  database: RoR_Sessions_and_Authorisations_development
+  database: mersenne12_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: RoR_Sessions_and_Authorisations_test
+  database: mersenne12_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +83,5 @@ test:
 #
 production:
   <<: *default
-  database: RoR_Sessions_and_Authorisations_production
-  username: RoR_Sessions_and_Authorisations
-  password: <%= ENV["ROR_SESSIONS_AND_AUTHORISATIONS_DATABASE_PASSWORD"] %>
+  database: mersenne12_production
+
