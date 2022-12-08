@@ -7,6 +7,8 @@ class SessionsController < ApplicationController
   def create
   
     @user = User.find_by(email: params[:email])
+    puts "USERS IS SIGNED IN" if user_signed_in?
+    puts "USER IS NOT SIGNED IN" if !user_signed_in?
     if !!@user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       session[:user_nick] = @user.nick
@@ -19,6 +21,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    puts "USERS IS SIGNED IN" if user_signed_in?
+    puts "USER IS NOT SIGNED IN" if !user_signed_in?
     session.delete :user_id
     flash[:success] = 'Successful exit'
     redirect_to root_path

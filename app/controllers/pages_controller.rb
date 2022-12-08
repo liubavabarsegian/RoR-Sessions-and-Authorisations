@@ -15,6 +15,8 @@ class PagesController < ApplicationController
       redirect_to root_path
       return
     end
+
+    puts "USER IS SIGNED IN"
     @new_elem = Mersenne.new(mersenne_params)
     unless @new_elem.valid?
       flash[:error] = 'Your stupid ass entered a non-positive value'
