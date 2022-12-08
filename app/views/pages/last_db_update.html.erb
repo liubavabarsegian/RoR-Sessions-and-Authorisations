@@ -1,2 +1,8 @@
-<h1>Pages#last_db_update</h1>
-<p>Find me in app/views/pages/last_db_update.html.erb</p>
+<div class = "main-last">
+    <h1>Last calculations</h1>
+        <p>Num: <%=Mersenne.order("created_at").last.num%></p>
+        <p>Result: <%=Mersenne.order("created_at").last.result%></p>
+        <p>Count: <%=Mersenne.order("created_at").last.count%></p>
+        <p>Created at: <%=Mersenne.order("created_at").last.created_at%></p>
+        <%=link_to 'Calculate again', form_path%>
+</div>

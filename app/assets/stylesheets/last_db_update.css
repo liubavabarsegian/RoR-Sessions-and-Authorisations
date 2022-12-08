@@ -1,11 +1,18 @@
 .main-last
 {
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    position: absolute;
+    width: 100%;;
+    text-align: center;
 }
 .main-last h1
 {
     color: #ab44db;
+}
+.main-last p
+{
+    text-align: justify;
+    font-size: 23px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #dfb5f2;
 }

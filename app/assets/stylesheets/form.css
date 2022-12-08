@@ -1,10 +1,8 @@
-/* .form-main
+.form-main
 {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #020305;
-
 }
 .form-container
 {
@@ -16,27 +14,3 @@
     text-align: left;
     color: #ab44db;
 }
-p
-{
-    font-size: 25px;
-    color: #ab44db;
-}
-.form-button
-{
-    border-radius: 15px;
-    background-color: #ab44db;
-}
-.form-button:hover
-{
-    background-color: #930dd6;
-}
-form .form-control
-{
-    width: 500px;
-    background-color: #bb8bd2;;;
-}
-#result
-{
-    font-size: 30px;
-    color: #930dd6;
-} */
