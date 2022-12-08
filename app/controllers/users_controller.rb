@@ -29,8 +29,9 @@ class UsersController < ApplicationController
       redirect_to new_path
     else
       session[:user_id] = @user.id
+      session[:user_nick] = @user.nick
       flash[:success] = "User was successfully created. Welcome, #{@user.email}!"
-      redirect_to login_path
+      redirect_to form_path
     end
   end
 

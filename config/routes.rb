@@ -3,10 +3,8 @@ Rails.application.routes.draw do
   resource :session, only: %i[new create destroy]
   root 'sessions#new'
 
-  get 'login', to: 'sessions#new'
   get 'new', to: 'users#new'
-  get 'logout', to: 'sessions#destroy'
-
+  get '/users/:user_id', to: 'users#show'
 
   get 'form', to: 'pages#form'
   get 'output', to: 'pages#output'

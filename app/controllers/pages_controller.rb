@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   def output
     if !user_signed_in?
       flash[:error] = "Log in for calculating"
-      redirect_to login_path
+      redirect_to root_path
       return
     end
     @new_elem = Mersenne.new(mersenne_params)
