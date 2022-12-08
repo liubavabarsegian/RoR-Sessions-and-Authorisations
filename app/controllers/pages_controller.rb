@@ -5,6 +5,10 @@ class PagesController < ApplicationController
   include PagesHelper
   def form; end
 
+  def mersenne_info
+    
+  end
+
   def output
     @new_elem = Mersenne.new(mersenne_params)
     unless @new_elem.valid?
