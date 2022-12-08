@@ -62,15 +62,17 @@
       </div>
     </nav>
     </header>
-    <% flash.each do |type, msg| %>
-      <%if type == "error"%>
-        <%type = "danger"%>
-      <%end%>
-			<div class='alert alert-<%= type%>'>
-				<%= msg %>
-			</div>
-    <% flash.clear %>
-		<% end %>
+    <div id="flash">
+      <% flash.each do |type, msg| %>
+        <%if type == "error"%>
+          <%type = "danger"%>
+        <%end%>
+        <div class='alert alert-<%= type%>'>
+          <%= msg %>
+        </div>
+      <% flash.clear %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

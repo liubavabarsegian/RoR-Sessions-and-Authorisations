@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   resource :session, only: %i[new create destroy]
+  resources :sessions, only: %i[new create show]
   root 'sessions#new'
 
   get 'new', to: 'users#new'

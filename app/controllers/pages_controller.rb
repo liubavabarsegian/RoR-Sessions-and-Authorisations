@@ -19,7 +19,7 @@ class PagesController < ApplicationController
     puts "USER IS SIGNED IN"
     @new_elem = Mersenne.new(mersenne_params)
     unless @new_elem.valid?
-      flash[:error] = 'Your stupid ass entered a non-positive value'
+      flash[:error] = 'Your have entered a non-positive value'
       redirect_to form_path
       nil
     end
