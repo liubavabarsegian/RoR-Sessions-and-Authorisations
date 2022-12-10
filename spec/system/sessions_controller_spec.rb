@@ -27,4 +27,11 @@ RSpec.describe SessionsController, type: 'system' do
     click_button 'Найти числа Мерсена до n'
     expect(find('#result-4')).to have_text('127')
   end
+
+  it 'should not calculate' do
+    visit form_path
+    fill_in 'input', with: '1235'
+    click_button 'Найти числа Мерсена до n'
+    expect(page).to have_text("Log in for calculating")
+  end
 end
