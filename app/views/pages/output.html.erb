@@ -14,7 +14,7 @@
                 <% while i < @result_m.size do %>
                     <tr>
                         <td><%= i + 1%></td>
-                        <td><%= @result_m[i]%></td>
+                        <td id = 'result-<%=i+1%>'><%= @result_m[i]%></td>
                     </tr>
                     <%i+= 1%>
                     <%end%>

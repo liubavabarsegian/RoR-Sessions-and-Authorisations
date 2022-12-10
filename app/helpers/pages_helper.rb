@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'json'
-
 # module
 module PagesHelper
   def prime?(num)
@@ -25,8 +23,8 @@ module PagesHelper
 
   def add_to_db(input, result)
     row = []
-    row << { num: input, result: result,
-            count: result.size }
+    row << { num: input, result:,
+             count: result.size }
     Mersenne.insert_all(row)
   end
 end

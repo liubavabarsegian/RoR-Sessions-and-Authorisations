@@ -5,18 +5,17 @@ class PagesController < ApplicationController
   include PagesHelper
   def form; end
 
-  def mersenne_info
-    
-  end
+  def mersenne_info; end
 
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def output
-    if !user_signed_in?
-      flash[:error] = "Log in for calculating"
+    unless user_signed_in?
+      flash[:error] = 'Log in for calculating'
       redirect_to root_path
       return
     end
 
-    puts "USER IS SIGNED IN"
+    puts 'USER IS SIGNED IN'
     @new_elem = Mersenne.new(mersenne_params)
     unless @new_elem.valid?
       flash[:error] = 'Your have entered a non-positive value'
@@ -35,6 +34,7 @@ class PagesController < ApplicationController
       add_to_db(@input, @result_m)
     end
   end
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 
   def db_to_xml
     render xml: Mersenne.last(15)
